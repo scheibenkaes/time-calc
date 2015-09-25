@@ -1,6 +1,6 @@
 (defproject time-calc "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Small web tool to calculate work hours"
+  :url "https://github.com/scheibenkaes/time-calc"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
