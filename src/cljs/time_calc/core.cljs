@@ -49,8 +49,9 @@
   (will-mount [_] (update-sum app))
   (render-state [_ state]
                 (dom/form
+                 (dom/div {:class "row" :id "header"})
                  (dom/div {:class "row"}
-                          (dom/div {:class "six columns"}
+                          (dom/div {:class "seven columns"}
                                    (dom/label {:for "startTime"} "Starting Time")
                                    (dom/input {:type "time" :id "startTime" :class "u-full-width"
                                                :value (:start-time app)
@@ -59,7 +60,7 @@
                                                                         (->value e))
                                                             (update-sum app))})))
                  (dom/div {:class "row"}
-                          (dom/div {:class "six columns"}
+                          (dom/div {:class "seven columns"}
                                    (dom/label {:for "startTime"} (str "Break " (format-break (:break app))))
                                    (dom/input {:type "range" :id "startTime" :class "u-full-width"
                                                :min 0 :max 60 :step 30 :value (:break app)
@@ -68,7 +69,7 @@
                                                                              (->value e))
                                                             (update-sum app))})))
                  (dom/div {:class "row"}
-                          (dom/div {:class "six columns"}
+                          (dom/div {:class "seven columns"}
                                    (dom/label {:for "endTime"} "End Time")
                                    (dom/input {:type "time" :id "endTime" :class "u-full-width"
                                                :value (:end-time app)
@@ -77,7 +78,7 @@
                                                                         (->value e))
                                                             (update-sum app))})))
                  (dom/div {:class "row"}
-                          (dom/div {:class "six columns"}
+                          (dom/div {:class "seven columns"}
                                    (dom/label {:for "sum"} "Time Span")
                                    (dom/input {:type "text" :id "sum" :class "u-full-width"
                                                :value (:sum app)}))))))
